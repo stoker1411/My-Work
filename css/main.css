@@ -1,1 +1,145 @@
 @import 'fonts.css';
+
+:root {
+  --body: #fff;
+  --text: #323232;
+  --link: #7177f1;
+  --title: #7177f1;
+  --btn: #7177f1;
+  --dots-active: #7177f1;
+  --dots: #828282;
+  --font-primary: 'Montserrat';
+  --font-secondary: 'Trebuchet';
+}
+
+body {
+  background: var(--body);
+  font-family: var(--font-primary);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+  margin: 0;
+}
+
+.logo::before {
+  content: url(../img/svg/logo-light.svg);
+}
+
+.all-btn {
+  background: var(--btn);
+  padding: 10px 0;
+  text-align: center;
+  display: block;
+  color: #fff !important;
+  box-shadow: 0px 0px 5px 1px rgba(113, 119, 241, 0.5);
+  border-radius: 8px;
+  transition: 500ms;
+}
+
+.all-btn:hover {
+  background: #fff;
+  color: var(--btn) !important;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--title);
+}
+
+/* header start */
+
+.header__list {
+  column-gap: 30px;
+  row-gap: 15px;
+}
+
+.header__link {
+  color: var(--link);
+  font-size: 24px;
+  line-height: 16px;
+  text-transform: capitalize;
+  transition: 500ms;
+}
+
+.header__link:hover {
+  color: var(--text);
+}
+
+.header__link-btn {
+  width: 190px;
+}
+
+.header__menu {
+  width: 50px;
+  height: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+.header__menu:focus {
+  box-shadow: unset;
+}
+
+.header__menu.collapsed {
+  background: var(--text);
+  transition: 500ms;
+}
+
+.header__menu::before,
+.header__menu::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--text);
+  transition: 500ms;
+}
+
+.header__menu::after {
+  top: 10px;
+}
+
+.header__menu:not(.collapsed)::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.header__menu:not(.collapsed)::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.header__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: var(--text);
+}
+
+.header__title {
+  margin-bottom: 24px;
+}
+
+.header__btn {
+  max-width: 300px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 auto 50px;
+}
+
+/* header end */

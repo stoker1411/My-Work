@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -14,7 +14,7 @@
 
 <body>
   <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar header__nav navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand header__logo logo" href="#"></a>
         <button class="navbar-toggler header__menu collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -38,34 +38,29 @@
     </nav>
     <div class="header__content">
       <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide row" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="col-xl-6">
-            <div class="col-xl-10 ms-auto header__content-desc">
+        <div id="carouselExampleIndicators" class="carousel slide row justify-content-center" data-bs-ride="carousel">
+          <div class="col-lg-8 col-xl-6">
+            <div class="col-xl-10 ms-auto text-center text-xl-start header__content-desc">
               <p class="header__subtitle">My beginning</p>
               <h1 class="header__title title">Self-development and training in the training center</h1>
               <a href="#!" class="header__btn all-btn">GET STARTED NOW</a>
             </div>
             <div class="row header__tech">
-              <div class="col-sm-4">
-                <span class="fab fa-html5 fa-4x header__tech-brand"></span>
+              <div class="col-6 col-sm-4 text-center mb-3 mb-xl-0 header__tech-card">
+                <span class="fab fa-html5 fa-5x mb-3 header__tech-brand"></span>
                 <h4 class="header__tech-name">html</h4>
               </div>
-              <div class="col-sm-4">
-                <span class="fab fa-css3-alt fa-4x header__tech-brand"></span>
+              <div class="col-6 col-sm-4 text-center mb-3 mb-xl-0 header__tech-card">
+                <span class="fab fa-css3-alt fa-5x mb-3 header__tech-brand"></span>
                 <h4 class="header__tech-name">css</h4>
               </div>
-              <div class="col-sm-4">
-                <span class="fab fa-bootstrap fa-4x header__tech-brand"></span>
+              <div class="col-sm-4 text-center mb-3 mb-xl-0 header__tech-card">
+                <span class="fab fa-bootstrap fa-5x mb-3 header__tech-brand"></span>
                 <h4 class="header__tech-name">bootsrap 5</h4>
               </div>
             </div>
           </div>
-          <div class="col-xl-6">
+          <div class="col-lg-8 col-xl-6">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="img/slide_1.png" class="d-block w-100 header__carousel-img" alt="...">
@@ -77,6 +72,11 @@
                 <img src="img/slide_1.png" class="d-block w-100 header__carousel-img" alt="...">
               </div>
             </div>
+          </div>
+          <div class="carousel-indicators header__carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="header__indicators-dots active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="header__indicators-dots"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="header__indicators-dots"></button>
           </div>
         </div>
       </div>

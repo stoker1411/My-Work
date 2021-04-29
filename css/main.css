@@ -271,13 +271,13 @@ p {
   width: 15px !important;
   height: 15px !important;
   border-radius: 50%;
-  background: var(--dots);
+  background: var(--dots) !important;
   border: none !important;
   opacity: 1 !important;
 }
 
 .header__indicators-dots.active {
-  background: var(--dots-active);
+  background: var(--dots-active) !important;
 }
 
 .header__carousel-img {
@@ -285,3 +285,138 @@ p {
 }
 
 /* header end */
+
+/* about start */
+
+.about {
+  position: relative;
+}
+
+.about::before {
+  content: url(../img/svg/figure_1.svg);
+  position: absolute;
+  top: -70%;
+  right: 0;
+  z-index: -1;
+}
+
+.about__work {
+  max-width: 190px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 18px;
+  position: relative;
+  padding: 24px 0;
+  top: 90px;
+  left: -15%;
+}
+
+.about__ball {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  background: #0FDAC2;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  top: -15px;
+  right: -15px;
+}
+
+.about__desc {
+  background: var(--body);
+  box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+  border-radius: 8px;
+  padding: 30px;
+  display: grid;
+  row-gap: 20px;
+}
+
+.about__txt {
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: capitalize;
+  color: var(--text);
+}
+
+.about__btn {
+  max-width: 190px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+/* about end */
+
+/* capabilities start */
+
+.capabilities {
+  padding: 80px 0;
+}
+
+.capabilities__title {
+  margin-bottom: 30px;
+}
+
+.accordion {
+  box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion__button {
+  width: 100%;
+  border: none;
+  background: var(--title);
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 900;
+  column-gap: 20px;
+  transition: .5s;
+}
+
+.accordion__brand {
+  transition: .2s;
+}
+
+.accordion__item:first-of-type .accordion__button.collapsed .accordion__brand {
+  color: #E44F26;
+}
+
+.accordion__item:nth-of-type(2) .accordion__button.collapsed .accordion__brand {
+  color: #1572B6;
+}
+
+.accordion__item:last-of-type .accordion__button.collapsed .accordion__brand {
+  color: #790FF1;
+}
+
+.accordion__body {
+  padding: 25px;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: capitalize;
+  background: var(--title);
+}
+
+.accordion__button.collapsed {
+  color: var(--title);
+  background: var(--body);
+}
+
+.accordion__icon-down {
+  font-size: 25px;
+  transition: .2s;
+}
+
+.accordion__button.collapsed .accordion__icon-down {
+  transform: rotate(180deg);
+}
+
+/* capabilities end */

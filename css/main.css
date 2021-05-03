@@ -5,6 +5,7 @@
   --text: #323232;
   --link: #7177f1;
   --title: #7177f1;
+  --title-tab:#fff;
   --btn: #7177f1;
   --dots-active: #7177f1;
   --dots: #828282;
@@ -379,6 +380,7 @@ p {
   font-weight: 900;
   column-gap: 20px;
   transition: .5s;
+  position: relative;
 }
 
 .accordion__brand {
@@ -403,6 +405,7 @@ p {
   line-height: 27px;
   text-transform: capitalize;
   background: var(--title);
+  color: #fff;
 }
 
 .accordion__button.collapsed {
@@ -419,4 +422,91 @@ p {
   transform: rotate(180deg);
 }
 
+.accordion__item:first-of-type .accordion__button.collapsed::after,
+.accordion__item:nth-of-type(2) .accordion__button.collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  height: 1px;
+  background: #ddd;
+  left: 50%;
+  transform: translateX(-50%);  
+}
 /* capabilities end */
+/* works start */
+.works {
+  padding-bottom: 100px;
+  position: relative;
+}
+.works::before {
+  content: url(../img/svg/figure_2.svg);
+  position: absolute;
+  top: -50%;
+  left: 0;
+  z-index: -1;
+}
+.works__title {
+  margin-bottom: 30px;
+}
+.works__tab-list {
+  border-radius: 8px;  
+}
+.works__tab-link {
+  background: var(--body);
+  box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+  color: var(--title);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 16.5px;
+  transition: 0.3s;
+  border: none;
+}
+.works__tab-link.active {
+  background: var(--title);
+  color: var(--title-tab);
+}
+.list-group-item+.list-group-item.active {
+  margin: 0;
+  border: none;  
+}
+.works__tab-image {
+  height: 100%; 
+  overflow: hidden;
+  min-height: 320px;
+}
+.works__tab-img {
+  width: 100%;
+  max-height: 320px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+}
+.works__tab-desc {
+  background: var(--body);
+  box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+  border-radius: 8px;
+  padding: 20px;
+}
+.works__tab-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.works__tab-txt {
+  font-size: 18px;
+  color: var(--text);
+  line-height: 27px;
+  margin-bottom: 25px;
+}
+.works__tab-btn {
+  max-width: 190px;
+  width: 100%;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+
+
+/* works end */

@@ -4,6 +4,7 @@
     --body: #151437;
     --text: #fff;
     --dots: #ebebeb;
+    --title-tab:#151437;
   }
   
   .logo::before {
@@ -13,7 +14,8 @@
 }
 
 @media (max-width: 1440px) {
-  .about::before {
+  .about::before,
+  .works::before {
     display: none;
   }
 }

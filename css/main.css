@@ -1,9 +1,10 @@
 @import 'fonts.css';
 
 :root {
-  --body: #fff;
+  --body: #fff; 
   --text: #323232;
   --link: #7177f1;
+  --footer-link: #7177f1;
   --title: #7177f1;
   --title-tab:#fff;
   --btn: #7177f1;
@@ -438,6 +439,7 @@ p {
 .works {
   padding-bottom: 100px;
   position: relative;
+  margin-bottom: 100px;
 }
 .works::before {
   content: url(../img/svg/figure_2.svg);
@@ -507,6 +509,18 @@ p {
   font-weight: 600;
 }
 
-
-
 /* works end */
+/* footer start */
+
+.footer__list {
+  list-style: none;
+}
+.footer__link, .footer__contact-link {
+  color: var(--footer-link);
+  font-size: 24px;
+}
+.footer__link:hover, .footer__contact-link:hover {
+  text-decoration: underline;
+  color: var(--footer-link);
+}
+/* footer end */

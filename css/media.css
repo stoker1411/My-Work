@@ -5,6 +5,7 @@
     --text: #fff;
     --dots: #ebebeb;
     --title-tab:#151437;
+    --footer-link: #fff
   }
   
   .logo::before {
